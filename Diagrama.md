@@ -28,17 +28,11 @@ class VentanaTransaccion {
     +registrarCompra()
     +registrarVenta()
 }
-class VentanaReporte {
-    +configurarUI()
-    +conectarSlots()
-    +generarPDF()
-    +generarCSV()
-}
+
 
 VentanaBase <|-- VentanaProducto
 VentanaBase <|-- VentanaProveedor
 VentanaBase <|-- VentanaTransaccion
-VentanaBase <|-- VentanaReporte
 
 
 %% Ventana principal
