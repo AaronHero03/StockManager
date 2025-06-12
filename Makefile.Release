@@ -569,6 +569,10 @@ release/moc_VentanaProducto.cpp: include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QFormLayout \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qformlayout.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QLayout \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
 		release/moc_predefs.h \
 		../../../QT/6.9.1/mingw_64/bin/moc.exe
 	D:\QT\6.9.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/Coding/POO 2/Situacion_Problema/release/moc_predefs.h" -ID:/QT/6.9.1/mingw_64/mkspecs/win32-g++ -I"D:/Coding/POO 2/Situacion_Problema" -I"D:/Coding/POO 2/Situacion_Problema/include" -ID:/QT/6.9.1/mingw_64/include -ID:/QT/6.9.1/mingw_64/include/QtWidgets -ID:/QT/6.9.1/mingw_64/include/QtGui -ID:/QT/6.9.1/mingw_64/include/QtCore -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0" -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0/x86_64-w64-mingw32" -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0/backward" -I"C:/Program Files (x86)/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include" -I"C:/Program Files (x86)/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed" -I"C:/Program Files (x86)/MinGW/x86_64-w64-mingw32/include" include\VentanaProducto.h -o release\moc_VentanaProducto.cpp
@@ -838,7 +842,11 @@ release/main.o: src/main.cpp ../../../QT/6.9.1/mingw_64/include/QtWidgets/QAppli
 		../../../QT/6.9.1/mingw_64/include/QtGui/qstandarditemmodel.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QFormLayout \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qformlayout.h \
-		../../../QT/6.9.1/mingw_64/include/QtWidgets/QLayout
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QLayout \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o src\main.cpp
 
 release/VentanaBase.o: src/VentanaBase.cpp include/VentanaBase.h \
@@ -1306,7 +1314,11 @@ release/VentanaProducto.o: src/VentanaProducto.cpp include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtGui/qstandarditemmodel.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QFormLayout \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qformlayout.h \
-		../../../QT/6.9.1/mingw_64/include/QtWidgets/QLayout
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QLayout \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\VentanaProducto.o src\VentanaProducto.cpp
 
 release/moc_VentanaBase.o: release/moc_VentanaBase.cpp 

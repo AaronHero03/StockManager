@@ -13,6 +13,7 @@
 #include <QLabel>
 #include <QStandardItemModel>
 #include <QFormLayout>
+#include <QMessageBox>
 
 class QPushButton;
 
@@ -28,7 +29,7 @@ public:
 
     // Métodos virtuales heredados de VentanaBase
     void configurarUI() override; // Configura la interfaz de usuario
-//    void conectarSlots() override; // Conecta señales y slots
+    void conectarSlots() override; // Conecta señales y slots
 
 //    void mostrarProducto(int idProducto); // Muestra los detalles del producto
 
@@ -48,7 +49,7 @@ private:
     QStandardItemModel* modeloProductos;
 
     // Métodos auxiliares
-    //void limpiarFormulario();
+    void limpiarFormulario();
     //void cargarProductos();
     //void actualizarTabla();
 };

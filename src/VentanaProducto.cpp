@@ -2,12 +2,16 @@
 
 VentanaProducto::VentanaProducto(QWidget *parent) : VentanaBase(parent) {
     configurarUI();    
-    //conectarSlots();
+    conectarSlots();
 }
 
 VentanaProducto::~VentanaProducto(){}
 
 void VentanaProducto::configurarUI() {
+    // Modificaciones a la ventana base
+    this->resize(400, 400); // Redimensionar la ventana a un tamaño específico
+
+
     // Titulo 
     QLabel* titulo = new QLabel("Gestión de Productos");
     titulo->setStyleSheet("color: white; font-size: 20px;");
@@ -44,16 +48,13 @@ void VentanaProducto::configurarUI() {
 
     // Botones
     botonAgregar = new QPushButton("Agregar");
-    botonActualizar = new QPushButton("Actualizar");
     botonEliminar = new QPushButton("Eliminar");
 
     botonAgregar->setStyleSheet("background-color: #4F48EC; color: white;");
-    botonActualizar->setStyleSheet("background-color: #FFBF18; color: black;");
     botonEliminar->setStyleSheet("background-color: red; color: white;");
 
     QHBoxLayout* layoutBotones = new QHBoxLayout();
     layoutBotones->addWidget(botonAgregar);
-    layoutBotones->addWidget(botonActualizar);
     layoutBotones->addWidget(botonEliminar);
 
     // Tabla
@@ -75,4 +76,48 @@ void VentanaProducto::configurarUI() {
 
 }
 
+// Conexión de señales y slots
+void VentanaProducto::conectarSlots() {
+    connect(botonAgregar, &QPushButton::clicked, this, [=]() {
+        // Validar campos
+        QString nombre = campoNombre->text();
+        if (nombre.isEmpty()) {
+            QMessageBox::warning(this, "Error", "El nombre del producto no puede estar vacío.");
+            return;
+        }
+
+        // Simular agregar fila
+        QList<QStandardItem*> fila;
+        fila << new QStandardItem("001");
+        fila << new QStandardItem(nombre);
+        fila << new QStandardItem(campoCategoria->text());
+        fila << new QStandardItem(QString::number(campoPrecio->value(), 'f', 2));
+        fila << new QStandardItem(QString::number(campoStock->value()));
+        fila << new QStandardItem(QString::number(campoMinimo->value()));
+
+        modeloProductos->appendRow(fila);
+
+        limpiarFormulario();
+    });
+
+    connect(botonEliminar, &QPushButton::clicked, this, [=]() {
+        QModelIndex index = tablaProductos->currentIndex();
+        if (index.isValid()) {
+            modeloProductos->removeRow(index.row());
+        } else {
+            QMessageBox::information(this, "Info", "Selecciona una fila para eliminar.");
+        }
+    });
+
+    // Los demás botones puedes conectarlos aquí también
+}
+
+// Método auxiliar
+void VentanaProducto::limpiarFormulario() {
+    campoNombre->clear();
+    campoCategoria->clear();
+    campoPrecio->setValue(0.0);
+    campoStock->setValue(0);
+    campoMinimo->setValue(0);
+}
 

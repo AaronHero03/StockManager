@@ -12,7 +12,7 @@ public:
     explicit VentanaBase(QWidget *parent = nullptr);
     virtual ~VentanaBase();
     virtual void configurarUI() = 0; // Método virtual puro para configurar la UI
-    //virtual void conectarSlots() = 0; // Método virtual puro para conectar señales y slots
+    virtual void conectarSlots() = 0; // Método virtual puro para conectar señales y slots
 
     QVBoxLayout* layoutPrincipal;
 
