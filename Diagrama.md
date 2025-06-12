@@ -17,7 +17,7 @@ class MainWindow {
     +mostrarVentanaTransaccion()
 }
 
-QWidget <!-- MainWindow
+QWidget <|-- MainWindow
 QWidget <|-- VentanaBase
 
 %% Ventanas gráficas
