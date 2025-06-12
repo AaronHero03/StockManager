@@ -9,7 +9,7 @@ VentanaProducto::~VentanaProducto(){}
 
 void VentanaProducto::configurarUI() {
     // Modificaciones a la ventana base
-    this->resize(400, 400); // Redimensionar la ventana a un tamaño específico
+    this->resize(700, 400); // Redimensionar la ventana a un tamaño específico
 
 
     // Titulo 
@@ -63,7 +63,8 @@ void VentanaProducto::configurarUI() {
 
     modeloProductos->setHorizontalHeaderLabels({"ID", "Nombre", "Categoría", "Precio", "Stock", "Mínimo"});
     tablaProductos->setModel(modeloProductos);
-    tablaProductos->setStyleSheet("color: white; background-color: #1E1E1E;");
+    tablaProductos->setStyleSheet("color: white; background-color: #1E1E1E; border: 1px solid #FFBF18;");tablaProductos->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    tablaProductos->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // Añadir todos los widgets al layout principal
     layoutPrincipal->addWidget(titulo);

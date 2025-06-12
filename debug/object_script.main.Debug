@@ -1,0 +1,15 @@
+debug/main.o
+debug/VentanaBase.o
+debug/VentanaProducto.o
+debug/VentanaProveedor.o
+debug/MainWindow.o
+debug/Producto.o
+debug/ProductoElectronico.o
+debug/ProductoPerecedero.o
+debug/Transaccion.o
+debug/Proveedor.o
+debug/Oferta.o
+debug/moc_VentanaBase.o
+debug/moc_VentanaProducto.o
+debug/moc_VentanaProveedor.o
+debug/moc_MainWindow.o
