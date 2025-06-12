@@ -22,22 +22,46 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->move(100, 100); // Mover la ventana a una posición específica
     this->resize(400, 600); // Redimensionar la ventana a un tamaño específico
 
-    // Crear un botón
-//    boton = new QPushButton("Haz clic aquí", this);
-
     // Layout vertical
     QVBoxLayout *layout = new QVBoxLayout();
-//    layout->addWidget(boton);
+    layout->setAlignment(Qt::AlignCenter); // Centrar el contenido del layout
+    
+
+    //////////// Layout horizontal ////////////
+
+    // Crear un botón
+    boton = new QPushButton("Haz clic aquí", this);
+    
+    // Establece la altura del boton a 100px
+    boton->setFixedHeight(50);
+    boton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    
+    boton->setStyleSheet("background-color: #4F48EC; color: white; font-size: 16px; border-radius: 10px;");
+
+    QHBoxLayout *hLayout = new QHBoxLayout();
+    hLayout->addStretch(1);
+    hLayout->addWidget(boton, 8);
+    hLayout->addStretch(1);
+
+    //////////////// Fin del Layout horizontal ////////////
+
+    // Añadir el layout horizontal al layout principal
+    layout->addLayout(hLayout);
+    layout->addStretch(); // Añadir espacio flexible para centrar el botón verticalmente
 
     // Asignar el layout al widget central
     central->setLayout(layout);
 
+
+
+    //////////// Conexiones ////////////
+
     // Conectar el clic del botón a una función lambda
-/*    connect(boton, &QPushButton::clicked, this, []() {
+    connect(boton, &QPushButton::clicked, this, []() {
         QMessageBox::information(nullptr, "Mensaje", "¡Hola desde Qt sin Designer!");
-    });*/
+    });
 }
 
 MainWindow::~MainWindow() {
-    // Qt gestiona destrucción de widgets hijos automáticamente
+    
 }
