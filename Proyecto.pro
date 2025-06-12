@@ -17,7 +17,9 @@ INCLUDEPATH += $$PWD/include
 ##########################################################
 SOURCES += \
     src/main.cpp \
-    src/MainWindow.cpp
+    src/VentanaBase.cpp \
+    src/VentanaProducto.cpp
 
 HEADERS += \
-    include/MainWindow.h
+    include/VentanaBase.h \ 
+    include/VentanaProducto.h
