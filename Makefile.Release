@@ -737,6 +737,11 @@ release/MainWindow.o: src/MainWindow.cpp include/MainWindow.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QPushButton \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qpushbutton.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qabstractbutton.h \
+		../../../QT/6.9.1/mingw_64/include/QtCore/QPropertyAnimation \
+		../../../QT/6.9.1/mingw_64/include/QtCore/qpropertyanimation.h \
+		../../../QT/6.9.1/mingw_64/include/QtCore/qvariantanimation.h \
+		../../../QT/6.9.1/mingw_64/include/QtCore/qabstractanimation.h \
+		../../../QT/6.9.1/mingw_64/include/QtCore/qeasingcurve.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
