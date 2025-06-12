@@ -1,8 +1,8 @@
 #include "MainWindow.h"
 #include "VentanaProducto.h"
 #include "VentanaProveedor.h"
-// #include "VentanaTransaccion.h"
-// #include "VentanaReporte.h"
+#include "VentanaTransaccion.h"
+#include "Inventario.h"
 
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -10,11 +10,14 @@
 #include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+    inventario = new Inventario();  // inicializar el inventario compartido
     configurarUI();
     conectarSlots();
 }
 
-MainWindow::~MainWindow() {}
+MainWindow::~MainWindow() {
+    delete inventario;  // liberar memoria si no usas smart pointers
+}
 
 void MainWindow::configurarUI() {
     QWidget* central = new QWidget(this);
@@ -36,9 +39,8 @@ void MainWindow::configurarUI() {
     botonProductos = new QPushButton("Productos");
     botonProveedores = new QPushButton("Proveedores");
     botonTransacciones = new QPushButton("Transacciones");
-    botonReportes = new QPushButton("Reportes");
 
-    QList<QPushButton*> botones = {botonProductos, botonProveedores, botonTransacciones, botonReportes};
+    QList<QPushButton*> botones = {botonProductos, botonProveedores, botonTransacciones};
     for (QPushButton* boton : botones) {
         boton->setFixedHeight(40);
         boton->setStyleSheet("background-color: #4F48EC; color: white; font-size: 16px;");
@@ -50,8 +52,8 @@ void MainWindow::configurarUI() {
 
 void MainWindow::conectarSlots() {
     connect(botonProductos, &QPushButton::clicked, this, [=]() {
-        auto* ventana = new VentanaProducto(this);
-        ventana->show();  // o ventana->exec() si es QDialog
+        auto* ventana = new VentanaProducto(inventario, this);
+        ventana->show();
     });
 
     connect(botonProveedores, &QPushButton::clicked, this, [=]() {
@@ -59,5 +61,8 @@ void MainWindow::conectarSlots() {
         ventana->show();
     });
 
-    // Puedes agregar conexiones similares para Transacciones y Reportes
+    connect(botonTransacciones, &QPushButton::clicked, this, [=]() {
+        auto* ventana = new VentanaTransaccion(inventario, this);
+        ventana->show();
+    });
 }

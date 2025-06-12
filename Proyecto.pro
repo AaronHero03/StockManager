@@ -20,18 +20,21 @@ SOURCES += \
     src/VentanaBase.cpp \
     src/VentanaProducto.cpp\
     src/VentanaProveedor.cpp \
+    src/VentanaTransaccion.cpp \
     src/MainWindow.cpp \ 
     src/Producto.cpp \  
     src/ProductoElectronico.cpp \  
     src/ProductoPerecedero.cpp \  
     src/Transaccion.cpp \  
     src/Proveedor.cpp \
-    src/Oferta.cpp
+    src/Oferta.cpp \
+    src/Inventario.cpp
     
 HEADERS += \
     include/VentanaBase.h \ 
     include/VentanaProducto.h \ 
     include/VentanaProveedor.h \ 
+    include/VentanaTransaccion.h \
     include/MainWindow.h \
     include/MainWindow.h \
     include/Producto.h \  
@@ -39,4 +42,5 @@ HEADERS += \
     include/ProductoPerecedero.h \  
     include/Transaccion.h \  
     include/Proveedor.h \
-    include/Oferta.h
+    include/Oferta.h \ 
+    include/Inventario.h

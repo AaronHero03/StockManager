@@ -1,7 +1,8 @@
 #include "VentanaProducto.h"
 
-VentanaProducto::VentanaProducto(QWidget *parent) : VentanaBase(parent) {
-    configurarUI();    
+VentanaProducto::VentanaProducto(Inventario* inventario, QWidget *parent)
+    : VentanaBase(parent), inventario(inventario) {
+    configurarUI();
     conectarSlots();
 }
 
@@ -114,6 +115,7 @@ void VentanaProducto::conectarSlots() {
         fila << new QStandardItem(QString::number(campoStock->value()));
         fila << new QStandardItem(QString::number(campoMinimo->value()));
         modeloProductos->appendRow(fila);
+        inventario->agregarProducto(*nuevoProducto);
 
         delete nuevoProducto;  // liberamos memoria si se usó new
         idCounter++;

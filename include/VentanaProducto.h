@@ -5,6 +5,7 @@
 #include "Producto.h"
 #include "ProductoElectronico.h"
 #include "ProductoPerecedero.h"
+#include "Inventario.h"
 
 #include <QWidget>
 #include <QTableView>
@@ -30,7 +31,7 @@ class VentanaProducto : public VentanaBase {
 
 public:
     // Constructor
-    explicit VentanaProducto(QWidget *parent = nullptr);
+    explicit VentanaProducto(Inventario* inventario, QWidget *parent = nullptr);
     
     // Destructor
     ~VentanaProducto() override;
@@ -62,4 +63,6 @@ private:
     void limpiarFormulario();
     //void cargarProductos();
     //void actualizarTabla();
+
+    Inventario* inventario;
 };
