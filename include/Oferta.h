@@ -12,5 +12,6 @@ public:
            int idProveedor, const std::string& nombreProv,
            float precioOferta, const std::string& condiciones);
 
+
     void mostrarOferta() const;
 };

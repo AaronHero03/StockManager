@@ -22,8 +22,10 @@ void VentanaProducto::configurarUI() {
     campoNombre->setPlaceholderText("Nombre del Producto");
     campoNombre->setStyleSheet("background-color: #FFFFFF; color: #000000; padding: 5px; border-radius: 5px;");
 
-    campoCategoria = new QLineEdit();
-    campoCategoria->setPlaceholderText("Categoría del Producto");
+    campoCategoria = new QComboBox();
+    campoCategoria->addItem("Producto");
+    campoCategoria->addItem("Producto electrónico");
+    campoCategoria->addItem("Producto perecedero");
     campoCategoria->setStyleSheet("background-color: #FFFFFF; color: #000000; padding: 5px; border-radius: 5px;");
 
     campoPrecio = new QDoubleSpinBox();
@@ -89,20 +91,33 @@ void VentanaProducto::conectarSlots() {
         }
 
         static int idCounter = 1; // Contador para IDs de productos
-        Producto nuevoProducto(idCounter++, nombre.toStdString(), campoPrecio->value(), campoStock->value());
+        std::string categoria = campoCategoria->currentText().toStdString();
 
-        listaProductos.push_back(nuevoProducto);
+        Producto* nuevoProducto = nullptr;
 
-        // Simular agregar fila
+        if (categoria == "Producto") {
+            nuevoProducto = new Producto(idCounter, nombre.toStdString(), campoPrecio->value(), campoStock->value());
+        } else if (categoria == "Producto electrónico") {
+            nuevoProducto = new ProductoElectronico(idCounter, nombre.toStdString(), campoPrecio->value(), campoStock->value());
+        } else if (categoria == "Producto perecedero") {
+            nuevoProducto = new ProductoPerecedero(idCounter, nombre.toStdString(), campoPrecio->value(), campoStock->value());
+        }
+        
+    if (nuevoProducto) {
+        listaProductos.push_back(*nuevoProducto);  // guardas una copia
+        // Agregar fila a la tabla
         QList<QStandardItem*> fila;
-        fila << new QStandardItem(QString::number(nuevoProducto.getId()));
+        fila << new QStandardItem(QString::number(nuevoProducto->getId()));
         fila << new QStandardItem(nombre);
-        fila << new QStandardItem(campoCategoria->text());
+        fila << new QStandardItem(campoCategoria->currentText());
         fila << new QStandardItem(QString::number(campoPrecio->value(), 'f', 2));
         fila << new QStandardItem(QString::number(campoStock->value()));
         fila << new QStandardItem(QString::number(campoMinimo->value()));
         modeloProductos->appendRow(fila);
 
+        delete nuevoProducto;  // liberamos memoria si se usó new
+        idCounter++;
+    }
         limpiarFormulario();
     });
 
@@ -121,7 +136,7 @@ void VentanaProducto::conectarSlots() {
 // Método auxiliar
 void VentanaProducto::limpiarFormulario() {
     campoNombre->clear();
-    campoCategoria->clear();
+    campoCategoria->setCurrentIndex(0);
     campoPrecio->setValue(0.0);
     campoStock->setValue(0);
     campoMinimo->setValue(0);

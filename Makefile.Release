@@ -567,6 +567,8 @@ release/moc_VentanaProducto.cpp: include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
 		include/Producto.h \
+		include/ProductoElectronico.h \
+		include/ProductoPerecedero.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
@@ -611,6 +613,8 @@ release/moc_VentanaProducto.cpp: include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QComboBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qcombobox.h \
 		release/moc_predefs.h \
 		../../../QT/6.9.1/mingw_64/bin/moc.exe
 	D:\QT\6.9.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/Coding/POO 2/Situacion_Problema/release/moc_predefs.h" -ID:/QT/6.9.1/mingw_64/mkspecs/win32-g++ -I"D:/Coding/POO 2/Situacion_Problema" -I"D:/Coding/POO 2/Situacion_Problema/include" -ID:/QT/6.9.1/mingw_64/include -ID:/QT/6.9.1/mingw_64/include/QtWidgets -ID:/QT/6.9.1/mingw_64/include/QtGui -ID:/QT/6.9.1/mingw_64/include/QtCore -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0" -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0/x86_64-w64-mingw32" -I"C:/Program Files (x86)/MinGW/include/c++/13.2.0/backward" -I"C:/Program Files (x86)/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include" -I"C:/Program Files (x86)/MinGW/lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed" -I"C:/Program Files (x86)/MinGW/x86_64-w64-mingw32/include" include\VentanaProducto.h -o release\moc_VentanaProducto.cpp
@@ -1922,6 +1926,8 @@ release/VentanaProducto.o: src/VentanaProducto.cpp include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
 		include/Producto.h \
+		include/ProductoElectronico.h \
+		include/ProductoPerecedero.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
@@ -1965,7 +1971,9 @@ release/VentanaProducto.o: src/VentanaProducto.cpp include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
-		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QComboBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qcombobox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\VentanaProducto.o src\VentanaProducto.cpp
 
 release/VentanaProveedor.o: src/VentanaProveedor.cpp include/VentanaProveedor.h \
@@ -2424,6 +2432,8 @@ release/MainWindow.o: src/MainWindow.cpp include/MainWindow.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
 		include/Producto.h \
+		include/ProductoElectronico.h \
+		include/ProductoPerecedero.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
@@ -2468,6 +2478,8 @@ release/MainWindow.o: src/MainWindow.cpp include/MainWindow.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/QComboBox \
+		../../../QT/6.9.1/mingw_64/include/QtWidgets/qcombobox.h \
 		include/VentanaProveedor.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QListWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlistwidget.h \

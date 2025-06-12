@@ -3,6 +3,8 @@
 #include "VentanaBase.h"
 #include "VentanaProducto.h"
 #include "Producto.h"
+#include "ProductoElectronico.h"
+#include "ProductoPerecedero.h"
 
 #include <QWidget>
 #include <QTableView>
@@ -16,7 +18,10 @@
 #include <QStandardItemModel>
 #include <QFormLayout>
 #include <QMessageBox>
+#include <QComboBox>
+
 #include <vector>
+
 
 class QPushButton;
 
@@ -39,7 +44,7 @@ public:
 private:
     // Widgets
     QLineEdit* campoNombre;
-    QLineEdit* campoCategoria;
+    QComboBox* campoCategoria;
     QDoubleSpinBox* campoPrecio;
     QSpinBox* campoStock;
     QSpinBox* campoMinimo;

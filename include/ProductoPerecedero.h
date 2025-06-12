@@ -6,6 +6,6 @@ private:
     std::string fechaCaducidad;
 
 public:
-    ProductoPerecedero(int id, const std::string& nombre, float precio, int stock, const std::string& caducidad);
+    ProductoPerecedero(int id, const std::string& nombre, float precio, int stock);
     void mostrarInfo() const override;
 };

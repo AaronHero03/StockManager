@@ -1,8 +1,8 @@
 #include "ProductoPerecedero.h"
 #include <iostream>
 
-ProductoPerecedero::ProductoPerecedero(int id, const std::string& nombre, float precio, int stock, const std::string& caducidad)
-    : Producto(id, nombre, precio, stock), fechaCaducidad(caducidad) {}
+ProductoPerecedero::ProductoPerecedero(int id, const std::string& nombre, float precio, int stock)
+    : Producto(id, nombre, precio, stock){}
 
 void ProductoPerecedero::mostrarInfo() const {
     Producto::mostrarInfo();
