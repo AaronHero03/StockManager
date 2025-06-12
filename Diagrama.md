@@ -40,10 +40,8 @@ class MainWindow {
     +mostrarVentanaProducto()
     +mostrarVentanaProveedor()
     +mostrarVentanaTransaccion()
-    +mostrarVentanaReporte()
 }
 
 MainWindow --> VentanaProducto
 MainWindow --> VentanaProveedor
 MainWindow --> VentanaTransaccion
-MainWindow --> VentanaReporte
