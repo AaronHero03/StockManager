@@ -63,7 +63,8 @@ void VentanaProducto::configurarUI() {
 
     modeloProductos->setHorizontalHeaderLabels({"ID", "Nombre", "Categoría", "Precio", "Stock", "Mínimo"});
     tablaProductos->setModel(modeloProductos);
-    tablaProductos->setStyleSheet("color: white; background-color: #1E1E1E; border: 1px solid #FFBF18;");tablaProductos->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    tablaProductos->setStyleSheet("color: white; background-color: #1E1E1E; border: 1px solid #FFBF18;");
+    tablaProductos->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     tablaProductos->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // Añadir todos los widgets al layout principal
@@ -87,15 +88,19 @@ void VentanaProducto::conectarSlots() {
             return;
         }
 
+        static int idCounter = 1; // Contador para IDs de productos
+        Producto nuevoProducto(idCounter++, nombre.toStdString(), campoPrecio->value(), campoStock->value());
+
+        listaProductos.push_back(nuevoProducto);
+
         // Simular agregar fila
         QList<QStandardItem*> fila;
-        fila << new QStandardItem("001");
+        fila << new QStandardItem(QString::number(nuevoProducto.getId()));
         fila << new QStandardItem(nombre);
         fila << new QStandardItem(campoCategoria->text());
         fila << new QStandardItem(QString::number(campoPrecio->value(), 'f', 2));
         fila << new QStandardItem(QString::number(campoStock->value()));
         fila << new QStandardItem(QString::number(campoMinimo->value()));
-
         modeloProductos->appendRow(fila);
 
         limpiarFormulario();

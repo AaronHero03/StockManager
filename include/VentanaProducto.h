@@ -1,6 +1,8 @@
 #pragma once
 
 #include "VentanaBase.h"
+#include "VentanaProducto.h"
+#include "Producto.h"
 
 #include <QWidget>
 #include <QTableView>
@@ -14,6 +16,7 @@
 #include <QStandardItemModel>
 #include <QFormLayout>
 #include <QMessageBox>
+#include <vector>
 
 class QPushButton;
 
@@ -47,6 +50,8 @@ private:
 
     QTableView* tablaProductos;
     QStandardItemModel* modeloProductos;
+
+    std::vector<Producto> listaProductos; // Almacena los IDs de los productos
 
     // Métodos auxiliares
     void limpiarFormulario();

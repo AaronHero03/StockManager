@@ -566,6 +566,7 @@ release/moc_VentanaProducto.cpp: include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		include/Producto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
@@ -1920,6 +1921,7 @@ release/VentanaProducto.o: src/VentanaProducto.cpp include/VentanaProducto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		include/Producto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
@@ -2421,6 +2423,7 @@ release/MainWindow.o: src/MainWindow.cpp include/MainWindow.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		include/Producto.h \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QWidget \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/QTableView \
 		../../../QT/6.9.1/mingw_64/include/QtWidgets/qtableview.h \
