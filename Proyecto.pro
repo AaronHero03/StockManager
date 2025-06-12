@@ -18,8 +18,25 @@ INCLUDEPATH += $$PWD/include
 SOURCES += \
     src/main.cpp \
     src/VentanaBase.cpp \
-    src/VentanaProducto.cpp
-
+    src/VentanaProducto.cpp\
+    src/VentanaProveedor.cpp \
+    src/MainWindow.cpp \ 
+    src/Producto.cpp \  
+    src/ProductoElectronico.cpp \  
+    src/ProductoPerecedero.cpp \  
+    src/Transaccion.cpp \  
+    src/Proveedor.cpp \
+    src/Oferta.cpp
+    
 HEADERS += \
     include/VentanaBase.h \ 
-    include/VentanaProducto.h
+    include/VentanaProducto.h \ 
+    include/VentanaProveedor.h \ 
+    include/MainWindow.h \
+    include/MainWindow.h \
+    include/Producto.h \  
+    include/ProductoElectronico.h \  
+    include/ProductoPerecedero.h \  
+    include/Transaccion.h \  
+    include/Proveedor.h \
+    include/Oferta.h

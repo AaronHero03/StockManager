@@ -1,68 +1,63 @@
-// #include "MainWindow.h"
-// #include <QPropertyAnimation>
-// #include <QPushButton>
-// #include <QVBoxLayout>
-// #include <QWidget>
-// #include <QMessageBox>
+#include "MainWindow.h"
+#include "VentanaProducto.h"
+#include "VentanaProveedor.h"
+// #include "VentanaTransaccion.h"
+// #include "VentanaReporte.h"
 
-// MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QWidget>
+#include <QLabel>
 
-//     /* Paleta de Colores 
-//     primary_color = "#4F48EC";
-//     enphasis_color = "#FFBF18";
-//     dark_bg = "#141414";
-//     light_bg = "#FFFFFF";
-//     */
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+    configurarUI();
+    conectarSlots();
+}
 
-//     // Crear el widget central
-//     QWidget *central = new QWidget(this);   
-//     setCentralWidget(central);
+MainWindow::~MainWindow() {}
 
-//     // Configurar la ventana principal
-//     this->setStyleSheet("background-color: #141414; font-family: Arial;");
-//     this->move(100, 100); // Mover la ventana a una posición específica
-//     this->resize(400, 600); // Redimensionar la ventana a un tamaño específico
+void MainWindow::configurarUI() {
+    QWidget* central = new QWidget(this);
+    setCentralWidget(central);
 
-//     // Layout vertical
-//     QVBoxLayout *layout = new QVBoxLayout();
-//     layout->setAlignment(Qt::AlignCenter); // Centrar el contenido del layout
-    
+    this->setWindowTitle("StockManager - Menú Principal");
+    this->resize(400, 500);
+    this->setStyleSheet("background-color: #141414; font-family: Arial;");
 
-//     //////////// Layout horizontal ////////////
+    QVBoxLayout* layout = new QVBoxLayout();
+    layout->setAlignment(Qt::AlignCenter);
 
-//     // Crear un botón
-//     boton = new QPushButton("Haz clic aquí", this);
-    
-//     // Establece la altura del boton a 100px
-//     boton->setFixedHeight(50);
-//     boton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    
-//     boton->setStyleSheet("background-color: #4F48EC; color: white; font-size: 16px; border-radius: 10px;");
+    QLabel* titulo = new QLabel("STOCKMANAGER");
+    titulo->setStyleSheet("color: white; font-size: 24px; font-weight: bold;");
+    titulo->setAlignment(Qt::AlignCenter);
+    layout->addWidget(titulo);
 
-//     QHBoxLayout *hLayout = new QHBoxLayout();
-//     hLayout->addStretch(1);
-//     hLayout->addWidget(boton, 8);
-//     hLayout->addStretch(1);
+    // Botones
+    botonProductos = new QPushButton("Productos");
+    botonProveedores = new QPushButton("Proveedores");
+    botonTransacciones = new QPushButton("Transacciones");
+    botonReportes = new QPushButton("Reportes");
 
-//     //////////////// Fin del Layout horizontal ////////////
+    QList<QPushButton*> botones = {botonProductos, botonProveedores, botonTransacciones, botonReportes};
+    for (QPushButton* boton : botones) {
+        boton->setFixedHeight(40);
+        boton->setStyleSheet("background-color: #4F48EC; color: white; font-size: 16px;");
+        layout->addWidget(boton);
+    }
 
-//     // Añadir el layout horizontal al layout principal
-//     layout->addLayout(hLayout);
-//     layout->addStretch(); // Añadir espacio flexible para centrar el botón verticalmente
+    central->setLayout(layout);
+}
 
-//     // Asignar el layout al widget central
-//     central->setLayout(layout);
+void MainWindow::conectarSlots() {
+    connect(botonProductos, &QPushButton::clicked, this, [=]() {
+        auto* ventana = new VentanaProducto(this);
+        ventana->show();  // o ventana->exec() si es QDialog
+    });
 
+    connect(botonProveedores, &QPushButton::clicked, this, [=]() {
+        auto* ventana = new VentanaProveedor(this);
+        ventana->show();
+    });
 
-
-//     //////////// Conexiones ////////////
-
-//     // Conectar el clic del botón a una función lambda
-//     connect(boton, &QPushButton::clicked, this, []() {
-//         QMessageBox::information(nullptr, "Mensaje", "¡Hola desde Qt sin Designer!");
-//     });
-// }
-
-// MainWindow::~MainWindow() {
-    
-// }
+    // Puedes agregar conexiones similares para Transacciones y Reportes
+}

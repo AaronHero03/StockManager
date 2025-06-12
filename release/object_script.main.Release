@@ -1,0 +1,15 @@
+release/main.o
+release/VentanaBase.o
+release/VentanaProducto.o
+release/VentanaProveedor.o
+release/MainWindow.o
+release/Producto.o
+release/ProductoElectronico.o
+release/ProductoPerecedero.o
+release/Transaccion.o
+release/Proveedor.o
+release/Oferta.o
+release/moc_VentanaBase.o
+release/moc_VentanaProducto.o
+release/moc_VentanaProveedor.o
+release/moc_MainWindow.o
