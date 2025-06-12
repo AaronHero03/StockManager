@@ -10,6 +10,14 @@ class VentanaBase {
     +conectarSlots()*
 }
 
+%% Ventana principal
+class MainWindow {
+    +mostrarVentanaProducto()
+    +mostrarVentanaProveedor()
+    +mostrarVentanaTransaccion()
+}
+
+QWidget <!-- MainWindow
 QWidget <|-- VentanaBase
 
 %% Ventanas gráficas
@@ -18,10 +26,12 @@ class VentanaProducto {
     +conectarSlots()
     +mostrarProducto()
 }
+
 class VentanaProveedor {
     +configurarUI()
     +conectarSlots()
 }
+
 class VentanaTransaccion {
     +configurarUI()
     +conectarSlots()
@@ -29,19 +39,10 @@ class VentanaTransaccion {
     +registrarVenta()
 }
 
-
 VentanaBase <|-- VentanaProducto
 VentanaBase <|-- VentanaProveedor
 VentanaBase <|-- VentanaTransaccion
 
-
-%% Ventana principal
-class MainWindow {
-    +mostrarVentanaProducto()
-    +mostrarVentanaProveedor()
-    +mostrarVentanaTransaccion()
-}
-
-MainWindow --> VentanaProducto
-MainWindow --> VentanaProveedor
-MainWindow --> VentanaTransaccion
+MainWindow ..> VentanaProducto
+MainWindow ..> VentanaProveedor
+MainWindow ..> VentanaTransaccion
