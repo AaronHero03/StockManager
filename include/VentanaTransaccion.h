@@ -1,3 +1,6 @@
+// Alexander Luna
+// ventanaTransaccion.h
+
 #pragma once
 
 #include "VentanaBase.h"

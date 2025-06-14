@@ -1,3 +1,6 @@
+// StockManager - Main Window Implementation
+// Aaron Hernandez
+
 #include "MainWindow.h"
 #include "VentanaProducto.h"
 #include "VentanaProveedor.h"

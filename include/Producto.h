@@ -1,3 +1,6 @@
+// Emiliano Montalvo
+// Producto.h
+
 #pragma once
 #include <string>
 

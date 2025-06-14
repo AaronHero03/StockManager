@@ -1,3 +1,7 @@
+// David Bribiesca 
+// VentanaBase.cpp
+
+
 #include "VentanaBase.h"
 #include <QPropertyAnimation>
 #include <QPushButton>

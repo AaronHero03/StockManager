@@ -1,3 +1,6 @@
+// Emiliano Montalvo
+// implementation of Producto class
+
 #include "Producto.h"
 #include <iostream>
 

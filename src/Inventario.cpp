@@ -1,4 +1,5 @@
 // InventarioProductos.cpp
+// David Bribiesca Valtierra
 #include "Inventario.h"
 
 void Inventario::agregarProducto(const Producto& p) {

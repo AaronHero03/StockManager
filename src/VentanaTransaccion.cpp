@@ -1,3 +1,6 @@
+// Alexander Luna
+// VentanaTransaccion.cpp
+
 #include "VentanaTransaccion.h"
 #include <QFormLayout>
 

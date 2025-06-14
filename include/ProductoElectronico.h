@@ -1,3 +1,6 @@
+// David Bribiesca 
+// ProductoElectronico.h
+
 #pragma once
 #include "Producto.h"
 

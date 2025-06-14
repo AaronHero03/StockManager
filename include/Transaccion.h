@@ -1,3 +1,6 @@
+// Emiliano Montalvo
+// Transaccion.h
+
 #pragma once
 #include <string>
 #include "Producto.h"

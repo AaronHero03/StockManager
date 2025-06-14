@@ -1,3 +1,6 @@
+// Emiliano Montalvo
+// transaccion.cpp
+
 #include "Transaccion.h"
 #include <iostream>
 

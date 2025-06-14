@@ -1,3 +1,6 @@
+// Aaron Hernandez
+// productoPerecedero.h
+
 #pragma once
 #include "Producto.h"
 

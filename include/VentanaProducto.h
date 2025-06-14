@@ -1,3 +1,6 @@
+// Aaron hernandez
+// VentanaProducto.h
+
 #pragma once
 
 #include "VentanaBase.h"

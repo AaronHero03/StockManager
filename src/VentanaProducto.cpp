@@ -1,3 +1,6 @@
+// Aaron hernandez
+// ventanaProducto.cpp
+
 #include "VentanaProducto.h"
 
 VentanaProducto::VentanaProducto(Inventario* inventario, QWidget *parent)

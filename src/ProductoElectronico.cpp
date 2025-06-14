@@ -1,3 +1,6 @@
+// David Bribiesca
+// implementation of ProductoElectronico class
+
 #include "ProductoElectronico.h"
 #include <iostream>
 

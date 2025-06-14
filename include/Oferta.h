@@ -1,3 +1,6 @@
+// Alexander Luna
+// Oferta.h
+
 #pragma once
 #include "Producto.h"
 #include "Proveedor.h"

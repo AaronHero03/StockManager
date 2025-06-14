@@ -1,3 +1,6 @@
+// David Bribiesca
+// VentanaBase.h
+
 #pragma once
 
 #include <QMainWindow>

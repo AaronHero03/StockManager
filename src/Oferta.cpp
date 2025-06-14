@@ -1,3 +1,6 @@
+// Alexander Luna
+// Implementation of the Oferta class
+
 #include "Oferta.h"
 #include <iostream>
 

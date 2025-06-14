@@ -1,3 +1,6 @@
+// Emiliano Montalvo
+// VentanaProveedor.h
+
 #pragma once
 
 #include <QWidget>

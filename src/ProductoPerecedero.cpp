@@ -1,3 +1,6 @@
+// Aaron Hernandez
+// ProductoPerecedero.cpp
+
 #include "ProductoPerecedero.h"
 #include <iostream>
 

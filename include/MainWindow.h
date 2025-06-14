@@ -1,3 +1,6 @@
+// MainWindow.h
+// Aaron Hernandez 
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

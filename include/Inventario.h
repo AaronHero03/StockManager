@@ -1,4 +1,5 @@
 // InventarioProductos.h
+// David Bribiesca
 #pragma once
 #include <vector>
 #include "Producto.h"
